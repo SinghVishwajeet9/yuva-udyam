@@ -16,6 +16,7 @@ import { Cover } from "@/components/ui/cover";
 import { BentoGrid } from "@/components/ui/bento-grid";
 import { Timeline, yuvaUdyamTimelineData } from "@/components/ui/timeline";
 import { BoxesCTA } from "@/components/ui/background-boxes";
+import { LoadingScreen } from "@/components/ui/LoadingScreen"; // ← NEW
 
 
 export default function LandingPage() {
@@ -72,6 +73,9 @@ export default function LandingPage() {
       duration={400}
     >
       <main className="bg-black w-full">
+
+        {/* ── LOADING SCREEN ── */}
+        <LoadingScreen /> {/* ← NEW */}
 
         {/* FLOATING NAV */}
         <FloatingNav navItems={navItems} />
